@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     <Header/>
 
     <div class="w-full md:w-2/3 lg:w/1/3 mx-auto mt-10">

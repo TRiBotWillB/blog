@@ -27,7 +27,7 @@ const latestPosts = [
 
 <template>
   <div>
-    <h2 class="text-2xl text-white mb-5 font-title">Latest Posts</h2>
+    <h2 class="text-3xl text-white mb-5 font-title">Latest Posts</h2>
 
     <div v-for="blog in latestPosts" class="border border-white p-5 flex flex-col mt-10">
       <div class="flex">

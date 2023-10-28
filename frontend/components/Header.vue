@@ -13,8 +13,7 @@
       </div>
     </div>
 
-    <div class="mt-5">
-
+    <div class="mt-5 text-center md:text-left">
       <span class="font-light ml-1">
         Web Development | Software Architecture
       </span>

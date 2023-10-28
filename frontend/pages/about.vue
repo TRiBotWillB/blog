@@ -8,7 +8,6 @@ import LatestPosts from "~/components/LatestPosts.vue";
   <main class="container mx-auto">
     <h1 class="text-3xl text-center font-title">/about</h1>
 
-    <LatestPosts class="mt-5" />
 
   </main>
 </template>

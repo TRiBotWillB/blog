@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  .font-title {
+    font-family: Abril Fatface, Tofu, serif;
+  }
+
+  .font-body {
+    font-family: Fira Code, serif;
+  }
+
+  * {
+    @apply text-white;
+    @apply font-body;
+  }
+
+  html, body {
+    @apply bg-primary;
+  }
+
+  a:hover {
+    @apply text-secondary;
+  }
+
+  .btn {
+    @apply border p-2 text-secondary border-secondary hover:text-white hover:border-white text-xs;
+  }
+}

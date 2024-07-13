@@ -29,7 +29,7 @@ const {data: aboutMe, pending, refresh, error} = await useAsyncData<AboutMePage>
       </h2>
 
       <p class="mt-5">
-        {{aboutMe.Intro}}
+        {{aboutMe?.Intro}}
       </p>
     </div>
   </main>

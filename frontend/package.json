@@ -19,6 +19,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "nuxt-strapi-blocks-renderer": "^1.0.7",
     "sass": "^1.69.5"
   }
 }

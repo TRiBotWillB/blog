@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_blog_posts",
+  "info": {
+    "displayName": "BlogPost"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "blocks"
+    }
+  }
+}

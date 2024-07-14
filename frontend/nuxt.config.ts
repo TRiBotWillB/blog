@@ -10,13 +10,14 @@ export default defineNuxtConfig({
                 'Abril+Fatface': true,
                 'Fira+Code': true
             }
-        }]
+        }],
+        'nuxt-strapi-blocks-renderer'
     ],
     strapi: {
         url: process.env.STRAPI_URL || 'http://localhost:1337',
     },
     app: {
-        pageTransition: { name: 'page', mode: 'out-in' }
+        pageTransition: {name: 'page', mode: 'out-in'}
     },
     ssr: true
 })

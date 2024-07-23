@@ -8,15 +8,22 @@ export default defineNuxtConfig({
         ['@nuxtjs/google-fonts', {
             families: {
                 'Abril+Fatface': true,
-                'Fira+Code': true
+                'Fira+Code': true,
+                'Lato': true,
+                'Josefin+Sans': true,
+                'Playfair+Display': [100, 200, 300, 400, 500, 600, 700],
+                'Bodoni+Moda':  [100, 200, 300, 400, 500, 600, 700],
+                'Raleway':  [100, 200, 300, 400, 500, 600, 700],
             }
-        }]
+        }],
+        'nuxt-strapi-blocks-renderer',
+        '@pinia/nuxt',
     ],
     strapi: {
         url: process.env.STRAPI_URL || 'http://localhost:1337',
     },
     app: {
-        pageTransition: { name: 'page', mode: 'out-in' }
+        pageTransition: {name: 'page', mode: 'out-in'}
     },
     ssr: true
 })

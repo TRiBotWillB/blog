@@ -1,52 +1,44 @@
 <script setup lang="ts">
-interface BlogSummary {
-  title: string;
-  summary: string;
-  date: number | string
-}
+import {useBlogStore} from "~/stores/BlogStore";
 
-const latestPosts = [
-  {
-    title: 'Lorem ipsum dolor sit amet consectetur',
-    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nulla elementum, hendrerit metus et, condimentum massa. Nunc dictum, orci id semper mollis, elit arcu vestibulum nulla, ac interdum nibh libero a leo.',
-    date: Date.now()
-  },
-  {
-    title: 'Lorem ipsum dolor sit amet consectetur',
-    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nulla elementum, hendrerit metus et, condimentum massa. Nunc dictum, orci id semper mollis, elit arcu vestibulum nulla, ac interdum nibh libero a leo.',
-    date: Date.now()
-  },
-  {
-    title: 'Lorem ipsum dolor sit amet consectetur',
-    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nulla elementum, hendrerit metus et, condimentum massa. Nunc dictum, orci id semper mollis, elit arcu vestibulum nulla, ac interdum nibh libero a leo.',
-    date: Date.now()
-  },
-] as BlogSummary[]
+const blogStore = useBlogStore();
+
+const {hasMorePosts} = storeToRefs(blogStore);
 
 </script>
 
 <template>
-  <div>
-    <h2 class="text-3xl text-white mb-5 font-title">Latest Posts</h2>
+    <div>
+        <h2 class="text-3xl text-white mb-5 font-title">Latest Posts</h2>
 
-    <div v-for="blog in latestPosts" class="border border-white p-5 flex flex-col mt-10">
-      <div class="flex">
-        <div class="flex-col">
-          <h3 class="text-lg">{{ blog.title }}</h3>
+        <div v-for="blog in blogStore.latestPosts" class="border border-white p-5 flex flex-col mt-10">
+            <div class="flex justify-between">
+                <div class="flex-col">
+                    <h3 class="text-lg">{{ blog.Title }}</h3>
+                </div>
 
-          <p class="mt-6 text-sm">{{ blog.summary }}</p>
+                <ClientOnly>
+                    <div class="flex-col text-lg text-secondary ">
+                        {{ new Date(blog.publishedAt).toLocaleDateString() }}
+                    </div>
+                </ClientOnly>
+            </div>
+
+            <div class="flex flex-col w-full mt-3">
+                {{useBlogSummary(blog, 200)}}...
+            </div>
+
+            <Button disabled :to="`/blog/${blog.id}`" class="mt-5 ml-auto btn text-sm">
+                Read More
+            </Button>
         </div>
 
-        <div class="flex-col text-lg text-secondary">
-          {{ new Date(blog.date).toLocaleDateString() }}
+        <div class="text-center mt-10 mb-10">
+            <Button @click="blogStore.fetchPosts()" :disabled="!hasMorePosts">
+                More Posts
+            </Button>
         </div>
-      </div>
-
-      <NuxtLink class="mt-3 ml-auto btn">
-        Read More
-      </NuxtLink>
     </div>
-  </div>
 </template>
 
 <style scoped lang="scss">

@@ -5,27 +5,30 @@
 
 @layer base {
   .font-title {
-    font-family: Abril Fatface, Tofu, serif;
+    font-family: Bodoni Moda, Tofu, serif;
+    font-weight: bold;
   }
 
   .font-body {
-    font-family: Fira Code, serif;
-  }
-
-  * {
-    @apply text-white;
-    @apply font-body;
+    font-family: Raleway, serif;
   }
 
   html, body {
     @apply bg-primary;
+    @apply text-white;
+    @apply font-body;
   }
 
   a:hover {
     @apply text-secondary;
   }
 
-  .btn {
-    @apply border p-2 text-secondary border-secondary hover:text-white hover:border-white text-xs;
+  pre {
+    @apply bg-primary-muted rounded-md  w-full px-5 py-2 text-sm;
   }
+
+  code {
+    @apply bg-primary-muted rounded-md  w-full px-2 py-1 text-sm;
+  }
+
 }

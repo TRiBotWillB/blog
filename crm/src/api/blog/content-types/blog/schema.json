@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Content": {
+    "content": {
       "type": "blocks"
     },
-    "test": {
-      "type": "richtext"
+    "summary": {
+      "type": "text"
     }
   }
 }

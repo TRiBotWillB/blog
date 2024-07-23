@@ -14,7 +14,7 @@ const {hasMorePosts} = storeToRefs(blogStore);
         <div v-for="blog in blogStore.latestPosts" class="border border-white p-5 flex flex-col mt-10">
             <div class="flex justify-between">
                 <div class="flex-col">
-                    <h3 class="text-lg">{{ blog.Title }}</h3>
+                    <h3 class="text-lg">{{ blog.title }}</h3>
                 </div>
 
                 <ClientOnly>

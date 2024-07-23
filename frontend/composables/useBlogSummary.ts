@@ -2,9 +2,9 @@ import type {BlogPost} from "~/types/strapi/BlogPost";
 import type {DefaultInlineNode, ParagraphBlockNode, TextInlineNode} from "#strapi-blocks-renderer/types";
 
 export function useBlogSummary(blogPost: BlogPost, length: number = 200): string {
-    if (!blogPost.Content) return '';
+    if (!blogPost.content) return '';
 
-    const textNodes = blogPost.Content
+    const textNodes = blogPost.content
         .filter(node => node.type == 'paragraph')
         .flatMap(node => node.children as DefaultInlineNode[])
         .filter(node => node.type === 'text') as TextInlineNode[];

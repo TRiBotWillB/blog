@@ -54,9 +54,9 @@ const projects = [
           </p>
 
 
-          <NuxtLink :to="project.id" class="mt-3 ml-auto btn">
+          <Button :to="project.id" class="mt-3 ml-auto btn">
             Read More
-          </NuxtLink>
+          </Button>
         </div>
 
       </div>

@@ -13,11 +13,11 @@ const {data: blog} = await useAsyncData(() => blogStore.fetchBlogById(blogId.val
 <template>
     <div v-if="blog">
         <div class="text-center mt-12">
-            <h1 class="text-4xl font-bold font-title">{{ blog.Title }}</h1>
+            <h1 class="text-4xl font-bold font-title">{{ blog.title }}</h1>
         </div>
 
         <div class="mt-10">
-            <StrapiBlocksText :nodes="blog.Content"/>
+            <StrapiBlocksText :nodes="blog.content"/>
         </div>
     </div>
 </template>

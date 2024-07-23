@@ -2,7 +2,8 @@ import type {BlockNode} from "#strapi-blocks-renderer/types";
 
 export interface BlogPost {
     id: number;
-    Title: string;
-    Content: BlockNode[];
+    title: string;
+    content: BlockNode[];
+    summary: string;
     publishedAt: string
 }

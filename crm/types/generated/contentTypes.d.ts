@@ -720,9 +720,9 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    Content: Attribute.Blocks;
-    test: Attribute.RichText;
+    title: Attribute.String;
+    content: Attribute.Blocks;
+    summary: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

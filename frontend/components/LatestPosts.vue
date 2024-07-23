@@ -3,13 +3,15 @@ import {useBlogStore} from "~/stores/BlogStore";
 
 const blogStore = useBlogStore();
 
+const {hasMorePosts} = storeToRefs(blogStore);
+
 </script>
 
 <template>
     <div>
         <h2 class="text-3xl text-white mb-5 font-title">Latest Posts</h2>
 
-        <div v-for="blog in blogStore.blogPosts" class="border border-white p-5 flex flex-col mt-10">
+        <div v-for="blog in blogStore.latestPosts" class="border border-white p-5 flex flex-col mt-10">
             <div class="flex justify-between">
                 <div class="flex-col">
                     <h3 class="text-lg">{{ blog.Title }}</h3>
@@ -23,16 +25,16 @@ const blogStore = useBlogStore();
             </div>
 
             <div class="flex flex-col w-full mt-3">
-                <StrapiBlocksText :nodes="blog.Content"/>
+                {{useBlogSummary(blog, 200)}}...
             </div>
 
-            <Button :to="`/blog/${blog.id}`" class="mt-5 ml-auto btn text-sm">
+            <Button disabled :to="`/blog/${blog.id}`" class="mt-5 ml-auto btn text-sm">
                 Read More
             </Button>
         </div>
 
-        <div class="text-center mt-10">
-            <Button>
+        <div class="text-center mt-10 mb-10">
+            <Button @click="blogStore.fetchPosts()" :disabled="!hasMorePosts">
                 More Posts
             </Button>
         </div>

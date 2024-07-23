@@ -5,5 +5,5 @@ export default defineNuxtPlugin(async (nuxt) => {
     const {$pinia} = useNuxtApp();
     const blogStore = useBlogStore($pinia);
 
-    await useAsyncData('blog', () => blogStore.fetchData())
+    await useAsyncData('blog', () => blogStore.fetchPosts())
 })

@@ -9,7 +9,7 @@
         <span class="font-title text-5xl mr-3">
           Hi!
         </span>
-        <img src="~/assets/images/wave.png" alt=""/>
+        <img class="wave" src="~/assets/images/wave.png" alt=""/>
       </div>
 
       <p class="font-title text-6xl mt-8">

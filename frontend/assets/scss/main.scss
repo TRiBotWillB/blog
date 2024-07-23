@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'vars';
+@import 'animations';
 
 @layer base {
   .font-title {

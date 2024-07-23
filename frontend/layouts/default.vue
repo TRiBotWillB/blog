@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import {useBlogStore} from "~/stores/BlogStore";
+
+const blogStore = useBlogStore();
 
 </script>
 

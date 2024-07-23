@@ -6,7 +6,7 @@ const blogStore = useBlogStore();
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     <Header/>
 
     <div class="w-full md:w-4/5 lg:w-3/4 mx-auto mt-10">

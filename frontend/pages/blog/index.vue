@@ -8,8 +8,8 @@ import LatestPosts from "~/components/LatestPosts.vue";
     <h1 class="text-3xl font-title text-center">/blog</h1>
 
       <div class="grid grid-cols-12 mt-5 gap-5">
-          <LatestPosts class="col-span-8" />
-          <Categories class="col-span-4" />
+          <LatestPosts class="col-span-12 md:col-span-8" />
+          <Categories class="col-span-12 md:col-span-4" />
       </div>
   </main>
 </template>

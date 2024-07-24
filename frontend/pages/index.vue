@@ -5,7 +5,9 @@ import RecentProjects from "~/components/RecentProjects.vue";
 
 <template>
     <main class="pb-10">
-        <div class="grid grid-cols-12 gap-6 mt-[8em]">
+        <h1 class="text-3xl text-center font-title">/home</h1>
+
+        <div class="grid grid-cols-12 gap-6 mt-[5em]">
             <div class="col-span-7">
                 <div class="flex items-center">
                 <span class="font-title text-5xl mr-3">

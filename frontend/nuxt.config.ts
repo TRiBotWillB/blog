@@ -17,6 +17,7 @@ export default defineNuxtConfig({
             }
         }],
         'nuxt-strapi-blocks-renderer',
+        '@vesp/nuxt-fontawesome',
         '@pinia/nuxt',
     ],
     strapi: {

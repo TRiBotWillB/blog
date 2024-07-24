@@ -15,9 +15,9 @@ const projects = [
     },
     {
         id: '123',
-        title: "Agrify",
+        title: "Bind",
         year: 2023,
-        summary: "Agrify is..."
+        summary: "Bind is..."
     },
 ] as Project[]
 </script>
@@ -27,9 +27,9 @@ const projects = [
         Recent Projects
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-10">
 
-        <div v-for="project in projects" class="border border-white p-4 flex flex-col">
+        <div v-for="project in projects" class="border border-primary-muted p-4 flex flex-col">
             <h3 class="font-title text-2xl">{{project.title}}</h3>
 
             <p class="mt-5">
@@ -41,6 +41,10 @@ const projects = [
                 Read More
             </Button>
         </div>
+    </div>
+
+    <div class="text-center my-10">
+        <Button to="projects">More Projects</Button>
     </div>
 </template>
 

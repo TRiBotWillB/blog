@@ -15,21 +15,21 @@ const projects = [
     },
     {
         id: '123',
-        title: "Agrify",
+        title: "Bind",
         year: 2023,
-        summary: "Agrify is..."
+        summary: "Bind is..."
     },
     {
         id: '123',
-        title: "Agrify",
+        title: "AI Quiz",
         year: 2023,
-        summary: "Agrify is..."
+        summary: "AI Quiz app..."
     },
     {
         id: '123',
-        title: "Agrify",
+        title: "Personal Blog",
         year: 2023,
-        summary: "Agrify is..."
+        summary: "Personal Blog..."
     },
 ] as Project[]
 </script>

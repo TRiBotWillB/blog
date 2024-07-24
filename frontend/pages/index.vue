@@ -31,34 +31,24 @@ import RecentProjects from "~/components/RecentProjects.vue";
 
                 <h2 class="font-light">Working Experience</h2>
 
-                <Card class="!border-primary-muted mt-5 flex mb-5">
-                    <div class="flex flex-row justify-between">
-
-                        <div class>
-                            <h3 class="text-sm">Writemedia Solutions</h3>
-                            <span class="text-xs font-bold">Team Lead</span>
-                        </div>
-
-                        <div class="text-xs font-bold">March 2023 - Current</div>
-                    </div>
-                </Card>
-                <Card class="!border-primary-muted mt-5 flex !flex-row justify-between mb-5 align-middle">
-                    <div class>
-                        <h3 class="text-sm">Writemedia Solutions</h3>
-                        <span class="text-xs font-bold">Software Developer</span>
-                    </div>
-
-                    <div class="text-xs font-bold">March 2023 - Current</div>
-
-                </Card>
-                <Card class="!border-primary-muted mt-5 flex !flex-row justify-between mb-5 align-middle">
-                    <div class>
-                        <h3 class="text-sm">Bind Technologies Ltd</h3>
-                        <span class="text-xs font-bold">Software Developer (Part-Time)</span>
-                    </div>
-
-                    <div class="text-xs font-bold">March 2023 - May 2024</div>
-                </Card>
+                <WorkExperienceCard
+                    job-title="Team Lead"
+                    company-name="Writemedia Solutions"
+                    date="March 2023 - Current"
+                    :id="123"
+                />
+                <WorkExperienceCard
+                    job-title="Software Developer"
+                    company-name="Writemedia Solutions"
+                    date="March 2023 - Current"
+                    :id="123"
+                />
+                <WorkExperienceCard
+                    job-title="Software Developer (Part-Time)"
+                    company-name="Bind Technologies Ltd"
+                    date="March 2023 - May 2024"
+                    :id="123"
+                />
             </div>
         </div>
 

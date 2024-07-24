@@ -7,7 +7,7 @@
         <h1 class="text-3xl text-center font-title">/contact</h1>
 
         <div class="flex justify-center mt-10">
-            <form class="w-full md:w-2/3  border p-5 border-primary-muted">
+            <form class="border p-5 border-primary-muted">
                 <h2 class="font-title text-xl mb-5">Contact Me</h2>
 
                 <div>

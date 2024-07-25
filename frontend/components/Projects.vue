@@ -49,7 +49,7 @@ const projects = [
             </p>
 
 
-            <Button :to="project.id" class="mt-3 ml-auto btn">
+            <Button :to="`/projects/${project.id}`" class="mt-3 ml-auto btn">
                 Read More
             </Button>
         </div>

@@ -22,12 +22,20 @@ const {data: navigation, pending, refresh, error} = await useAsyncData<Navigatio
             <h1 class="text-6xl font-title">Will Baker</h1>
 
             <div class="text-3xl">
-                <NuxtLink :to="navigation?.linkedin" target="_blank" class="mr-5 hover:text-4xl transition-all duration-200">
+                <NuxtLink
+                    :to="navigation?.linkedin"
+                    target="_blank"
+                    class="mr-5 hover:text-4xl transition-all duration-200">
                     <font-awesome :icon="faLinkedin" />
+                    <span class="sr-only">LinkedIn</span>
                 </NuxtLink>
 
-                <NuxtLink :to="navigation?.github" target="_blank" class="hover:text-4xl transition-all duration-200">
+                <NuxtLink
+                    :to="navigation?.github"
+                    target="_blank"
+                    class="hover:text-4xl transition-all duration-200">
                     <font-awesome :icon="faGithub" />
+                    <span class="sr-only">Github</span>
                 </NuxtLink>
             </div>
         </div>

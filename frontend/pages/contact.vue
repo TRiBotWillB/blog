@@ -10,7 +10,12 @@
             <form class="border p-5 border-primary-muted">
                 <h2 class="font-title text-xl mb-5">Contact Me</h2>
 
-                <div>
+                <p>
+                    Hey there! I'm always happy to hear from you. If you have any questions, or feedback or just want to
+                    say hi, feel free to reach out to me on any of the platforms listed on my site, or using the contact form below.
+                </p>
+
+                <div class="mt-5">
                     <label for="email">
                         Email
                     </label>

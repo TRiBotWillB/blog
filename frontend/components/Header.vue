@@ -1,29 +1,55 @@
 <script setup lang="ts">
 
+import {useAsyncData} from "#app";
+import type {Navigation} from "~/types/strapi/Navigation";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+
+const {findOne} = useStrapi<Navigation>()
+
+const {data: navigation, pending, refresh, error} = await useAsyncData<Navigation>(
+    'navigation',
+    async () => {
+        const response = await findOne('navigation');
+
+        return response?.data.attributes
+    });
+
 </script>
 
 <template>
-  <div class="mt-10">
-    <div class="flex flex-row items-center justify-between mt-5">
-      <h1 class="text-6xl font-title">Will Baker</h1>
+    <div class="mt-10">
+        <div class="flex flex-row items-center justify-between mt-5">
+            <h1 class="text-6xl font-title">Will Baker</h1>
 
-      <div>
-        <a href="#" class="mr-5">LinkedIn</a>
-        <a href="#">Github</a>
-      </div>
-    </div>
+            <div class="text-3xl">
+                <NuxtLink
+                    :to="navigation?.linkedin"
+                    target="_blank"
+                    class="mr-5 hover:text-4xl transition-all duration-200">
+                    <font-awesome :icon="faLinkedin" />
+                    <span class="sr-only">LinkedIn</span>
+                </NuxtLink>
 
-    <div class="mt-5">
+                <NuxtLink
+                    :to="navigation?.github"
+                    target="_blank"
+                    class="hover:text-4xl transition-all duration-200">
+                    <font-awesome :icon="faGithub" />
+                    <span class="sr-only">Github</span>
+                </NuxtLink>
+            </div>
+        </div>
 
-      <span class="font-light ml-1">
-        Web Development | Software Architecture
+        <div class="mt-5 text-center md:text-left">
+      <span class="font-light ml-1 ">
+        {{navigation?.subtitle}}
       </span>
+        </div>
     </div>
-  </div>
 
-  <div class="text-center mt-5">
-    <Nav/>
-  </div>
+    <div class="text-center mt-5">
+        <Nav/>
+    </div>
 </template>
 
 <style scoped lang="scss">

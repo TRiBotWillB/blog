@@ -10,6 +10,7 @@ const nav = [
   {text: 'About', href: '/about'},
   {text: 'Blog', href: '/blog'},
   {text: 'Projects', href: '/projects'},
+  {text: 'Contact', href: '/contact'},
 ] as Nav[]
 
 const route = useRoute();
